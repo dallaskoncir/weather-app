@@ -39,9 +39,9 @@ app.getImages = function(condition) {
     dataType: 'jsonp',
     data: {
       method: 'flickr.photos.search',
-      lat: latLong[0],
-      lon: latLong[1],
-      radius: 32,
+      // lat: latLong[0],
+      // lon: latLong[1],
+      // radius: 32,
       tags: condition,
       api_key: '1c49eada5aabb7ffd962945bf55ce2aa',
       format: 'json'
