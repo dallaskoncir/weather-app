@@ -39,9 +39,9 @@ app.getImages = function(condition) {
     dataType: 'jsonp',
     data: {
       method: 'flickr.photos.search',
-      // lat: latLong[0],
-      // lon: latLong[1],
-      // radius: 32,
+      lat: latLong[0],
+      lon: latLong[1],
+      radius: 32,
       tags: condition,
       api_key: '1c49eada5aabb7ffd962945bf55ce2aa',
       format: 'json'
@@ -113,8 +113,8 @@ app.checkHours = function(x) {
 
 // Get weather information from Weather Underground
 app.getWeatherInfo = function(city) {
-  // var cityState = city.address_components[2].long_name + '/' + city.address_components[0].long_name;
-  var cityState = 'Ontario/Toronto';
+  var cityState = city.address_components[2].long_name + '/' + city.address_components[0].long_name;
+  // var cityState = 'Ontario/Toronto';
 
   $.ajax({
     url: 'http://api.wunderground.com/api/3e75e57900676776/forecast10day/q/' + cityState +'.json',
