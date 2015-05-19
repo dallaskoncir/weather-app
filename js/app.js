@@ -1,7 +1,4 @@
-// Weather underground api key 3e75e57900676776
-// flickr key 1c49eada5aabb7ffd962945bf55ce2aa
-// flickr secret 27dff3a23f98ec8d
-
+// Create empty object to start application
 var app = {};
 
 // Get current location
