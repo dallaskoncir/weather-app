@@ -1,0 +1,122 @@
+@import 'variables';
+@import 'normalize';
+@import '../bower_components/juice/dist/juice';
+@import 'grid';
+@import 'typography';
+@import 'icons';
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: $bodyFont;
+  font-size: 1rem;
+  background: $bg;
+  color: $mainColor;
+  background: url(../images/weather-bg.jpg);
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  @media (max-width: 1023px) {
+    flex-direction: column-reverse;
+  }
+}
+
+header.main {
+  font-family: 'Open Sans',sans-serif;
+  background: rgba(255,255,255,0.8);
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  z-index: 5;
+  width: auto;
+  padding: 20px;
+  -webkit-box-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+  box-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+  @media (max-width: 1023px) {
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+}
+
+.headsUp {
+  display: block;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  font-size: 3rem;
+  color: rgba(255,255,255,0.85);
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+.time {
+  @include clearfix;
+  i {
+    float: left;
+    font-size: 2.5rem;
+    margin-right: 10px;
+  }
+  p {
+    line-height: 1.5;
+  }
+}
+
+.image, .weather {
+  height: 100vh;
+  @media (max-width: 1023px) {
+    height: auto;
+  }
+}
+
+.image {
+  position: relative;
+  overflow: hidden;
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  @media (max-width: 1023px) {
+    overflow: visible;
+  }
+}
+
+.weather {
+  flex: 1 0 20%;
+  display: flex;
+  flex-direction: column;
+  background: rgba(255,255,255,0.75);
+  overflow: scroll;
+  box-shadow: 1px 0 2px rgba(0,0,0,0.5);
+  @media (max-width: 1023px) {
+    overflow: visible;
+  }
+}
+
+.weatherItem {
+  @include clearfix;
+  padding: 10px;
+  flex: 1 0 auto;
+  text-align: center;
+  .icon, .temp {
+    float: left;
+    margin-left: 20px;
+  }
+  .icon {
+    margin-top: 5px;
+    text-align: center;
+    svg {
+      width: 80px;
+      height: 80px;
+    }
+  }
+}
+
+.iconList {
+  display: none;
+}
