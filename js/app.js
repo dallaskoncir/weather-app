@@ -113,8 +113,8 @@ app.checkHours = function(x) {
 
 // Get weather information from Weather Underground
 app.getWeatherInfo = function(city) {
-  var cityState = city.address_components[2].long_name + '/' + city.address_components[0].long_name;
-  // var cityState = 'Ontario/Toronto';
+  // var cityState = city.address_components[2].long_name + '/' + city.address_components[0].long_name;
+  var cityState = 'Ontario/Toronto';
 
   $.ajax({
     url: 'http://api.wunderground.com/api/3e75e57900676776/forecast10day/q/' + cityState +'.json',
