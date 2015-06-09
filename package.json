@@ -1,0 +1,26 @@
+{
+  "name": "week5project",
+  "version": "1.0.0",
+  "description": "This is a weather/photo gallery app that I created using geolocation, Google Maps, Weather Underground and Flickr APIs. Still a work in progress.",
+  "main": "Gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dallaskoncir/week5project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dallaskoncir/week5project/issues"
+  },
+  "homepage": "https://github.com/dallaskoncir/week5project#readme",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^2.3.0",
+    "gulp-concat": "^2.5.2",
+    "gulp-plumber": "^1.0.1",
+    "gulp-sass": "^2.0.1"
+  }
+}

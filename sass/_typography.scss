@@ -7,6 +7,9 @@ h1 {
   font-size: 2.75rem;
   line-height: 1;
   margin-bottom: 10px;
+  @media (max-width: 900px) {
+    font-size: 2rem;
+  }
 }
 
 h2 {
@@ -14,6 +17,10 @@ h2 {
   font-weight: 300;
   line-height: 1;
   margin-top: 20px;
+  @media (max-width: 1078px) {
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
 }
 
 h3 {

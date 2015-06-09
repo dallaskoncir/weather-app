@@ -3,7 +3,6 @@
 @import '../bower_components/juice/dist/juice';
 @import 'grid';
 @import 'typography';
-@import 'icons';
 
 html {
   font-size: 16px;
@@ -19,10 +18,12 @@ body {
 
 .container {
   max-width: 1280px;
+  height: 100vh;
   margin: 0 auto;
   display: flex;
-  @media (max-width: 1023px) {
+  @media (max-width: 900px) {
     flex-direction: column-reverse;
+    height: auto;
   }
 }
 
@@ -37,10 +38,21 @@ header.main {
   padding: 20px;
   -webkit-box-shadow: 1px 1px 2px rgba(0,0,0,0.5);
   box-shadow: 1px 1px 2px rgba(0,0,0,0.5);
-  @media (max-width: 1023px) {
+  @media (max-width: 900px) {
     bottom: 0;
     left: 0;
     right: 0;
+  }
+}
+
+.logo {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 40;
+  width: 170px;
+  img {
+    max-width: 100%;
   }
 }
 
@@ -52,6 +64,11 @@ header.main {
   font-size: 3rem;
   color: rgba(255,255,255,0.85);
   text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+  z-index: 50;
+  @media (max-width: 900px) {
+    left: auto;
+    right: 10px;
+  }
 }
 
 .time {
@@ -68,7 +85,7 @@ header.main {
 
 .image, .weather {
   height: 100vh;
-  @media (max-width: 1023px) {
+  @media (max-width: 900px) {
     height: auto;
   }
 }
@@ -81,7 +98,7 @@ header.main {
     width: 100%;
     height: auto;
   }
-  @media (max-width: 1023px) {
+  @media (max-width: 900px) {
     overflow: visible;
   }
 }
@@ -93,7 +110,7 @@ header.main {
   background: rgba(255,255,255,0.75);
   overflow: scroll;
   box-shadow: 1px 0 2px rgba(0,0,0,0.5);
-  @media (max-width: 1023px) {
+  @media (max-width: 900px) {
     overflow: visible;
   }
 }
@@ -106,6 +123,10 @@ header.main {
   .icon, .temp {
     float: left;
     margin-left: 20px;
+    @media (max-width: 1078px) {
+      float: none;
+      margin-left: 0;
+    }
   }
   .icon {
     margin-top: 5px;
